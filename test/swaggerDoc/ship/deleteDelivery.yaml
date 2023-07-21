@@ -1,0 +1,38 @@
+paths:
+  /ship/DeliveryDelete:
+    put:
+      description: "delete subscription Details"
+      tags:
+        - Delivery
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "delete the delivery  Details"
+          type: "Integer"
+          schema:
+              type: "object"
+              required: true
+              properties:
+                id: 
+                  type: "integer"                                                                           
+      responses:
+        "200":
+          description: "delete delivery  Details"
+          schema:
+            type: "object"
+            properties:
+              data:
+                type: "array"
+                items:
+                  type: "integer"
+              success:
+                type: "boolean"   
+        "402":
+          description: "Invalid Request"
+          schema:
+            type: "object"
+            properties:
+              message:
+                type: "string"
+              statuscode:
+                type: "boolean"

@@ -1,0 +1,63 @@
+paths:
+  /ship/Shippingdelivery/{id}:
+    get:
+      description: "get DeliveryandShipping  Details"
+      tags:
+        - ShippingDelivery
+      parameters:
+        - in: "path"
+          name: "id"
+          description: "Enter the id "
+          schema:
+              type: "object"
+              required: true
+              properties:
+                id: 
+                  type: "integer"            
+      responses:
+        "200":
+          description: "get the Details"
+          schema:
+            type: "object"
+            properties:
+              Shipping:
+                type: "object"
+                properties:
+                id: 
+                  type: "integer" 
+                from:
+                  type: "integer"
+                to:
+                  type: "integer"
+                amount:
+                  type: "integer"        
+                isDeleted:
+                  type: "boolean"
+                deliveryId:
+                  type: "integer"
+                  Delivery:
+                    id:
+                      type: "integer"
+                    storeId:
+                      type: "integer"
+                    name:
+                      type: "string"
+                    minimumSubtotal:
+                      type: "integer"
+                    shippingType:
+                      type: "string"
+                    amountType:
+                      type: "string"
+                    isDeleted:
+                      type: "boolean"
+                    isActive:
+                      type: "boolean"  
+        "402":
+          description: "Invalid Request"
+          schema:
+            type: "object"
+            properties:
+              message:
+                type: "string"
+              statuscode:
+                type: "boolean"  

@@ -1,0 +1,84 @@
+paths:
+  /ship/DeliveryShipping:
+    post:
+      description: "Create DeliveryShipping  Details"
+      tags:
+        - ShippingDelivery
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Enter the Details"
+          schema:
+              type: "object"
+              required: true
+              properties:
+                id: 
+                  type: "integer"
+                storeId:
+                  type: "integer"
+                name:
+                  type: "string"
+                minimumSubtotal:
+                  type: "integer"
+                shippingType:
+                  type: "enum"
+                amountType:
+                  type: "enum"    
+                isDeleted:
+                  type: "boolean"
+                isActive:
+                  type: "boolean"
+                from:
+                  type: "integer"
+                to:
+                  type: "integer"
+                amount:
+                  type: "integer"
+                deliveryId:
+                  type: "integer"                        
+      responses:
+        "200":
+          description: "create the Details"
+          schema:
+            type: "object"
+            properties:
+              deliveryData:
+                # type: "array"
+                type: "object"
+                properties:
+                id: 
+                  type: "integer"
+                storeId:
+                  type: "integer"
+                name:
+                  type: "string"
+                minimumSubtotal:
+                  type: "integer"
+                shippingType:
+                  type: "enum"
+                amountType:
+                  type: "enum"    
+                isDeleted:
+                  type: "boolean"
+                isActive:
+                  type: "boolean"
+        "402":
+          description: "Invalid Request"
+          schema:
+            type: "object"
+            properties:
+              message:
+                type: "string"
+              statuscode:
+                type: "boolean"
+  
+
+
+
+
+
+
+
+    
+
+  

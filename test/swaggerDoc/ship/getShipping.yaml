@@ -1,0 +1,43 @@
+paths:
+  /ship/shipping:
+    post:
+      description: "get Shipping  Details"
+      tags:
+        - ShippingDelivery
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Enter the Details"
+          schema:
+              type: "object"
+              required: true
+              properties:
+                id: 
+                  type: "integer"
+                subtotal:
+                  type: "integer"
+                tax:
+                  type: "integer"                 
+      responses:
+        "200":
+          description: "get the Amount Details"
+          schema:
+            type: "object"
+            properties:
+              data:
+                type: "object"
+                properties:
+                amount: 
+                  type: "integer"
+                success:
+                
+                  type: "boolean"                    
+        "402":
+          description: "Invalid Request"
+          schema:
+            type: "object"
+            properties:
+              message:
+                type: "string"
+              statuscode:
+                type: "boolean"  

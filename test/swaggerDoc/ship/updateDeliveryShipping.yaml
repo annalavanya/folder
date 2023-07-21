@@ -1,0 +1,49 @@
+paths:
+  /ship/shippingType:
+    post:
+      description: "updateShippingandDelivery Details"
+      tags:
+        - ShippingDelivery
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Enter the ShippingandDelivery  Details"
+          schema:
+              type: "object"
+              required: true
+              properties:
+                id: 
+                  type: "integer"
+                shippingType:
+                  type: "enum"
+                amountType:
+                  type: "enum"
+                from:
+                  type: "integer"
+                to:
+                  type: "integer"                     
+      responses:
+        "200":
+          description: "Update the Details"
+          schema:
+            type: "object"
+            properties:
+              Deliverydata:
+                type: "array"
+                items:
+                  type: "integer"
+              Shippingdata:
+                type: "array"
+                items:
+                  type: "integer"  
+              success:
+                type: "boolean"      
+        "402":
+          description: "Invalid Request"
+          schema:
+            type: "object"
+            properties:
+              message:
+                type: "string"
+              statuscode:
+                type: "boolean" 

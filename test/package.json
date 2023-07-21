@@ -1,0 +1,26 @@
+{
+  "name": "project",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "jest": "jest --runInBand --coverage --detectOpenHandles"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "~4.16.1",
+    "express-validator": "^7.0.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jest": "^29.5.0",
+    "morgan": "~1.9.1",
+    "parse-error": "^0.2.0",
+    "pg": "^8.10.0",
+    "sequelize": "^6.31.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.2"
+  }
+}
